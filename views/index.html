@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="/images/cheeseburger.ico" type="image/x-icon">
+    <title>DevBurger</title>
+</head>
+
+<body class="bg-amber-50 min-h-screen flex flex-col items-center justify-center">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h1 class="text-4xl font-extrabold text-center text-amber-600 mb-8">Bem vindo ao DevBurger</h1>
+        <form action="/sugestao" method="GET" class="space-y-4">
+            <input type="text" id="nome" name="nome" placeholder="Nome" required
+                class="w-full px-4 py-2 border border-amber-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-400" />
+            <input type="text" id="ingredientes" name="ingredientes" placeholder="Ingredientes" required
+                class="w-full px-4 py-2 border border-amber-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-400" />
+            <button type="submit"
+                class="cursor-pointer w-full bg-amber-600 text-white font-semibold py-2 rounded hover:bg-amber-700 transition">Enviar</button>
+        </form>
+        <div class="flex justify-between mt-6">
+            <a href="/contato" class="text-amber-600 hover:underline">Contato</a>
+            <a href="/api/lanches" class="text-amber-600 hover:underline">Lanches</a>
+        </div>
+    </div>
+</body>
+
+</html>
