@@ -18,6 +18,9 @@ app.get("/contato", (req, res) => {
 
 app.post("/contato", (req, res) => {
    const { nome, email, assunto, mensagem } = req.body;
+   if (!nome || !email || !assunto || !mensagem) {
+      return res.status(400).sendFile(path.join(__dirname, "public", "400.html"));
+   }
    res.send(`
        <html>
             <head>
